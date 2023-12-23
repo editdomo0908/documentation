@@ -1,52 +1,19 @@
-@import "mixins/banner";
-@include bsBanner("");
+/* Error: Undefined mixin.
+ *    ,
+ * 22 |     @include border-radius(0.25rem);
+ *    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   theme\_base.scss 22:2   @import
+ *   theme\styles.scss 10:9  @import
+ *   theme.scss 65:9         root stylesheet */
 
-
-// scss-docs-start import-stack
-// Configuration
-@import "functions";
-@import "variables";
-@import "variables-dark";
-@import "maps";
-@import "mixins";
-@import "utilities";
-
-// Layout & components
-@import "root";
-@import "reboot";
-@import "type";
-@import "images";
-@import "containers";
-@import "grid";
-@import "tables";
-@import "forms";
-@import "buttons";
-@import "transitions";
-@import "dropdown";
-@import "button-group";
-@import "nav";
-@import "navbar";
-@import "card";
-@import "accordion";
-@import "breadcrumb";
-@import "pagination";
-@import "badge";
-@import "alert";
-@import "progress";
-@import "list-group";
-@import "close";
-@import "toasts";
-@import "modal";
-@import "tooltip";
-@import "popover";
-@import "carousel";
-@import "spinners";
-@import "offcanvas";
-@import "placeholders";
-
-// Helpers
-@import "helpers";
-
-// Utilities
-@import "utilities/api";
-// scss-docs-end import-stack
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 22 \2502      @include border-radius(0.25rem);\a    \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   theme\\_base.scss 22:2   @import\a   theme\\styles.scss 10:9  @import\a   theme.scss 65:9         root stylesheet";
+}
